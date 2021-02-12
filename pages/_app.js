@@ -1,10 +1,16 @@
 import '../styles/globals.css'
-import initAuth from '../firebase/initAuth'
+//import initAuth from '../firebase/initAuth'
+import { AuthProvider } from '../lib/auth'
 
-initAuth()
+//initAuth()
 
-function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+//wrap the app in authprovider
+function App({ Component, pageProps }) {
+  return (
+    <AuthProvider>
+      <Component {...pageProps} />
+    </AuthProvider>
+  )
 }
 
-export default MyApp
+export default App

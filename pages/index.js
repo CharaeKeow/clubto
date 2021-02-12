@@ -1,22 +1,11 @@
-import React from 'react'
-import Link from 'next/link'
-import {
-  useAuthUser,
-  withAuthUser,
-  withAuthUserTokenSSR,
-} from 'next-firebase-auth'
+import { useAuth } from '../lib/auth'
 import Header from '../components/Header'
 
 const App = () => {
-  const AuthUser = useAuthUser()
+  const auth = useAuth()
   return (
-    <div>
-      <Header email={AuthUser.email} signOut={AuthUser.signOut} />
-    </div>
+    <Header user={auth.user} signInWithGitHub={auth.signInWithGitHub} signout={auth.signout} />
   )
 }
 
-// Note that this is a higher-order function.
-export const getServerSideProps = withAuthUserTokenSSR()()
-
-export default withAuthUser()(App)
+export default (App)
