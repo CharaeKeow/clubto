@@ -31,3 +31,12 @@ To learn more about Next.js, take a look at the following resources:
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+
+## My thoughts
+### Here I write my thoughts when doing this project so far
+
+1. Auth is harder than I thought
+Seems like there is many thigns that is needed to be taken care of regarding authentication and handling users identity and profile. And I still haven't taking into account any security factors yet 😣.
+First, I struggle to find ways to implement Firebase Auth. Besides, I got more confuse whether I should do it on server-side (SSR) or client. So I tried using [next-firebase-auth](https://github.com/gladly-team/next-firebase-auth) in my project as I think it is easier to use a library to handle this rather than doing from scratch.
+However, as I am new to Next and using Firebase with it, I feel that using next-firebase-auth feels like high level and most of the time I just follow the docs without following what's going on behind the sense.
+Thus, I am thinking of doing auth from scratch, i.e. I know what's going on and also probably have more control (because I know what's happening so easier to change and add more feature). Luckily, I found this excellent [course](https://docs.react2025.com/) by Lee Robinson, so I've been following this for implementing the auth. And so far I've successfully add the auth and at the same time am confident enough to tweak things here and there.
