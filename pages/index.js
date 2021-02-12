@@ -4,7 +4,7 @@ import Header from '../components/Header'
 const App = () => {
   const auth = useAuth()
   return (
-    <Header user={auth.user} signInWithGitHub={auth.signInWithGitHub} signout={auth.signout} />
+    <Header user={auth.user} signInWithGitHub={auth.signInWithGitHub} signInWithGoogle={auth.signInWithGoogle} signout={auth.signout} />
   )
 }
 
